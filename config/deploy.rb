@@ -10,7 +10,7 @@ load "config/recipes/check"
 
 
 server "ec2-54-232-231-94.sa-east-1.compute.amazonaws.com", :web, :app, :db, :primary => true
-ssh_options[:keys] = ["#{ENV['HOME']}/keys/hangerout.pem"]
+ssh_options[:keys] = ["#{ENV['HOME']}/hangerout.pem"]
 
 
 set :user, "deployer"
