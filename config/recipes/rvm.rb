@@ -11,6 +11,7 @@ after "deploy:update_code", "rvm:trust_rvmrc"
 desc "trust project .rvmrc automatically"
 namespace :rvm do
   task :trust_rvmrc do
-    run "rvm rvmrc trust #{release_path}"
+    # run "rvm rvmrc trust #{release_path}"
+    run "rvm rvmrc trust /home/#{user}/apps/#{application}/current/.rvmrc"    
   end
 end
