@@ -3,13 +3,13 @@ require "bundler/capistrano"
 load "config/recipes/base"
 load "config/recipes/nginx"
 load "config/recipes/unicorn"
-load "config/recipes/mysql"
+#load "config/recipes/mysql"
 load "config/recipes/nodejs"
 load "config/recipes/rvm"
 load "config/recipes/check"
 
 
-server "ec2-54-232-231-94.sa-east-1.compute.amazonaws.com", :web, :app, :db, :primary => true
+server "54.232.231.45", :web, :app, :db, :primary => true
 ssh_options[:keys] = ["#{ENV['HOME']}/hangerout.pem"]
 
 
